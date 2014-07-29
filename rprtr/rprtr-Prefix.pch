@@ -13,4 +13,10 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import <Realm/Realm.h>
+    #import <ReactiveCocoa/ReactiveCocoa.h>
+    #import <libextobjc/extobjc.h>
+
+    #import "UIColor+Hex.h"
 #endif

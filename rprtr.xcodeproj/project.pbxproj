@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2E2371742B4866932FEDA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EBB80FA8744B7AA6DE18EA /* libPods.a */; };
+		F91827CE19803BBA00F78931 /* RPRFreshbooksProject.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827CD19803BBA00F78931 /* RPRFreshbooksProject.m */; };
+		F91827D219803E7200F78931 /* RPRFreshbooksTimeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827D119803E7200F78931 /* RPRFreshbooksTimeEntry.m */; };
+		F91827DC1980424000F78931 /* NSURLRequest+XML.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827DB1980424000F78931 /* NSURLRequest+XML.m */; };
+		F91827DF198054D300F78931 /* RPRProjectParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827DE198054D300F78931 /* RPRProjectParserDelegate.m */; };
+		F91827E21982405D00F78931 /* RPRTimeEntryParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827E11982405D00F78931 /* RPRTimeEntryParserDelegate.m */; };
+		F91827E61982798E00F78931 /* RPRTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827E51982798E00F78931 /* RPRTask.m */; };
+		F91827E91982799F00F78931 /* RPRProject.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827E81982799F00F78931 /* RPRProject.m */; };
+		F91827EC198279AA00F78931 /* RPRTimeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F91827EB198279AA00F78931 /* RPRTimeEntry.m */; };
+		F935B551197E893E004D4D5F /* RPRLineChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F935B550197E893E004D4D5F /* RPRLineChartCell.m */; };
+		F935B557197EEFE1004D4D5F /* RPRTaskParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F935B556197EEFE1004D4D5F /* RPRTaskParserDelegate.m */; };
+		F935B55A197EF2E2004D4D5F /* RPRFreshbooksTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F935B559197EF2E2004D4D5F /* RPRFreshbooksTask.m */; };
+		F93D3E0519869B9300E26786 /* RPRWebSignalsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D3E0419869B9300E26786 /* RPRWebSignalsManager.m */; };
+		F93D3E081986AB9800E26786 /* RPRSyncSignalsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D3E071986AB9800E26786 /* RPRSyncSignalsManager.m */; };
+		F9BB4FD3197E5FCD000FF201 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BB4FD2197E5FCD000FF201 /* UIColor+Hex.m */; };
 		F9BD7C0B197E5B4000470C5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD7C0A197E5B4000470C5C /* Foundation.framework */; };
 		F9BD7C0D197E5B4000470C5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD7C0C197E5B4000470C5C /* CoreGraphics.framework */; };
 		F9BD7C0F197E5B4000470C5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BD7C0E197E5B4000470C5C /* UIKit.framework */; };
@@ -34,6 +49,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6EBB80FA8744B7AA6DE18EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE104919693C480D8492EE83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F91827CC19803BBA00F78931 /* RPRFreshbooksProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRFreshbooksProject.h; sourceTree = "<group>"; };
+		F91827CD19803BBA00F78931 /* RPRFreshbooksProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRFreshbooksProject.m; sourceTree = "<group>"; };
+		F91827D019803E7200F78931 /* RPRFreshbooksTimeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRFreshbooksTimeEntry.h; sourceTree = "<group>"; };
+		F91827D119803E7200F78931 /* RPRFreshbooksTimeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRFreshbooksTimeEntry.m; sourceTree = "<group>"; };
+		F91827DA1980424000F78931 /* NSURLRequest+XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+XML.h"; sourceTree = "<group>"; };
+		F91827DB1980424000F78931 /* NSURLRequest+XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+XML.m"; sourceTree = "<group>"; };
+		F91827DD198054D300F78931 /* RPRProjectParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRProjectParserDelegate.h; sourceTree = "<group>"; };
+		F91827DE198054D300F78931 /* RPRProjectParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRProjectParserDelegate.m; sourceTree = "<group>"; };
+		F91827E01982405D00F78931 /* RPRTimeEntryParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRTimeEntryParserDelegate.h; sourceTree = "<group>"; };
+		F91827E11982405D00F78931 /* RPRTimeEntryParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRTimeEntryParserDelegate.m; sourceTree = "<group>"; };
+		F91827E41982798E00F78931 /* RPRTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRTask.h; sourceTree = "<group>"; };
+		F91827E51982798E00F78931 /* RPRTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRTask.m; sourceTree = "<group>"; };
+		F91827E71982799F00F78931 /* RPRProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRProject.h; sourceTree = "<group>"; };
+		F91827E81982799F00F78931 /* RPRProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRProject.m; sourceTree = "<group>"; };
+		F91827EA198279AA00F78931 /* RPRTimeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRTimeEntry.h; sourceTree = "<group>"; };
+		F91827EB198279AA00F78931 /* RPRTimeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRTimeEntry.m; sourceTree = "<group>"; };
+		F935B54F197E893E004D4D5F /* RPRLineChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRLineChartCell.h; sourceTree = "<group>"; };
+		F935B550197E893E004D4D5F /* RPRLineChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRLineChartCell.m; sourceTree = "<group>"; };
+		F935B555197EEFE1004D4D5F /* RPRTaskParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRTaskParserDelegate.h; sourceTree = "<group>"; };
+		F935B556197EEFE1004D4D5F /* RPRTaskParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRTaskParserDelegate.m; sourceTree = "<group>"; };
+		F935B558197EF2E2004D4D5F /* RPRFreshbooksTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRFreshbooksTask.h; sourceTree = "<group>"; };
+		F935B559197EF2E2004D4D5F /* RPRFreshbooksTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRFreshbooksTask.m; sourceTree = "<group>"; };
+		F93D3E0319869B9300E26786 /* RPRWebSignalsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRWebSignalsManager.h; sourceTree = "<group>"; };
+		F93D3E0419869B9300E26786 /* RPRWebSignalsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRWebSignalsManager.m; sourceTree = "<group>"; };
+		F93D3E061986AB9800E26786 /* RPRSyncSignalsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRSyncSignalsManager.h; sourceTree = "<group>"; };
+		F93D3E071986AB9800E26786 /* RPRSyncSignalsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRSyncSignalsManager.m; sourceTree = "<group>"; };
+		F9BB4FD1197E5FCD000FF201 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		F9BB4FD2197E5FCD000FF201 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		F9BD7C07197E5B4000470C5C /* rprtr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rprtr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BD7C0A197E5B4000470C5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9BD7C0C197E5B4000470C5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +108,7 @@
 				F9BD7C0D197E5B4000470C5C /* CoreGraphics.framework in Frameworks */,
 				F9BD7C0F197E5B4000470C5C /* UIKit.framework in Frameworks */,
 				F9BD7C0B197E5B4000470C5C /* Foundation.framework in Frameworks */,
+				6F2E2371742B4866932FEDA5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +125,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91827CF19803E3D00F78931 /* Freshbooks Model */ = {
+			isa = PBXGroup;
+			children = (
+				F935B558197EF2E2004D4D5F /* RPRFreshbooksTask.h */,
+				F935B559197EF2E2004D4D5F /* RPRFreshbooksTask.m */,
+				F91827CC19803BBA00F78931 /* RPRFreshbooksProject.h */,
+				F91827CD19803BBA00F78931 /* RPRFreshbooksProject.m */,
+				F91827D019803E7200F78931 /* RPRFreshbooksTimeEntry.h */,
+				F91827D119803E7200F78931 /* RPRFreshbooksTimeEntry.m */,
+			);
+			name = "Freshbooks Model";
+			sourceTree = "<group>";
+		};
+		F91827D31980402D00F78931 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				F935B555197EEFE1004D4D5F /* RPRTaskParserDelegate.h */,
+				F935B556197EEFE1004D4D5F /* RPRTaskParserDelegate.m */,
+				F91827DD198054D300F78931 /* RPRProjectParserDelegate.h */,
+				F91827DE198054D300F78931 /* RPRProjectParserDelegate.m */,
+				F91827E01982405D00F78931 /* RPRTimeEntryParserDelegate.h */,
+				F91827E11982405D00F78931 /* RPRTimeEntryParserDelegate.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		F91827D41980403B00F78931 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				F9BB4FD1197E5FCD000FF201 /* UIColor+Hex.h */,
+				F9BB4FD2197E5FCD000FF201 /* UIColor+Hex.m */,
+				F91827DA1980424000F78931 /* NSURLRequest+XML.h */,
+				F91827DB1980424000F78931 /* NSURLRequest+XML.m */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		F91827D51980404B00F78931 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F935B54F197E893E004D4D5F /* RPRLineChartCell.h */,
+				F935B550197E893E004D4D5F /* RPRLineChartCell.m */,
+				F9BD7C1C197E5B4000470C5C /* Main.storyboard */,
+				F9BD7C1F197E5B4000470C5C /* ViewController.h */,
+				F9BD7C20197E5B4000470C5C /* ViewController.m */,
+				F93D3E0319869B9300E26786 /* RPRWebSignalsManager.h */,
+				F93D3E0419869B9300E26786 /* RPRWebSignalsManager.m */,
+				F93D3E061986AB9800E26786 /* RPRSyncSignalsManager.h */,
+				F93D3E071986AB9800E26786 /* RPRSyncSignalsManager.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F91827D61980405E00F78931 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9BD7C22197E5B4000470C5C /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F91827E31982796C00F78931 /* Realm Model */ = {
+			isa = PBXGroup;
+			children = (
+				F91827E41982798E00F78931 /* RPRTask.h */,
+				F91827E51982798E00F78931 /* RPRTask.m */,
+				F91827E71982799F00F78931 /* RPRProject.h */,
+				F91827E81982799F00F78931 /* RPRProject.m */,
+				F91827EA198279AA00F78931 /* RPRTimeEntry.h */,
+				F91827EB198279AA00F78931 /* RPRTimeEntry.m */,
+			);
+			name = "Realm Model";
+			sourceTree = "<group>";
+		};
 		F9BD7BFE197E5B4000470C5C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +206,7 @@
 				F9BD7C2F197E5B4100470C5C /* rprtrTests */,
 				F9BD7C09197E5B4000470C5C /* Frameworks */,
 				F9BD7C08197E5B4000470C5C /* Products */,
+				DE104919693C480D8492EE83 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +226,7 @@
 				F9BD7C0C197E5B4000470C5C /* CoreGraphics.framework */,
 				F9BD7C0E197E5B4000470C5C /* UIKit.framework */,
 				F9BD7C29197E5B4000470C5C /* XCTest.framework */,
+				D6EBB80FA8744B7AA6DE18EA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,12 +234,14 @@
 		F9BD7C10197E5B4000470C5C /* rprtr */ = {
 			isa = PBXGroup;
 			children = (
+				F91827D61980405E00F78931 /* Resources */,
+				F91827D51980404B00F78931 /* Views */,
+				F91827D41980403B00F78931 /* Extentions */,
+				F91827D31980402D00F78931 /* Parsers */,
+				F91827E31982796C00F78931 /* Realm Model */,
+				F91827CF19803E3D00F78931 /* Freshbooks Model */,
 				F9BD7C19197E5B4000470C5C /* AppDelegate.h */,
 				F9BD7C1A197E5B4000470C5C /* AppDelegate.m */,
-				F9BD7C1C197E5B4000470C5C /* Main.storyboard */,
-				F9BD7C1F197E5B4000470C5C /* ViewController.h */,
-				F9BD7C20197E5B4000470C5C /* ViewController.m */,
-				F9BD7C22197E5B4000470C5C /* Images.xcassets */,
 				F9BD7C11197E5B4000470C5C /* Supporting Files */,
 			);
 			path = rprtr;
@@ -159,9 +283,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9BD7C39197E5B4100470C5C /* Build configuration list for PBXNativeTarget "rprtr" */;
 			buildPhases = (
+				B5A1CF422128410E82FC7387 /* Check Pods Manifest.lock */,
 				F9BD7C03197E5B4000470C5C /* Sources */,
 				F9BD7C04197E5B4000470C5C /* Frameworks */,
 				F9BD7C05197E5B4000470C5C /* Resources */,
+				E2B6C30A710D4C04878DC69C /* Copy Pods Resources */,
+				F907EF34197E5D8E008DE2E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -244,14 +371,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5A1CF422128410E82FC7387 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B6C30A710D4C04878DC69C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F907EF34197E5D8E008DE2E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mdfind -onlyin \"${SRCROOT}\" \"kMDItemContentTypeTree == public.font\" -0 | sort -z | xargs -0 /usr/local/bin/moarfonts install";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9BD7C03197E5B4000470C5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91827E61982798E00F78931 /* RPRTask.m in Sources */,
+				F91827E21982405D00F78931 /* RPRTimeEntryParserDelegate.m in Sources */,
 				F9BD7C21197E5B4000470C5C /* ViewController.m in Sources */,
+				F91827DF198054D300F78931 /* RPRProjectParserDelegate.m in Sources */,
+				F9BB4FD3197E5FCD000FF201 /* UIColor+Hex.m in Sources */,
+				F91827DC1980424000F78931 /* NSURLRequest+XML.m in Sources */,
+				F93D3E0519869B9300E26786 /* RPRWebSignalsManager.m in Sources */,
+				F91827CE19803BBA00F78931 /* RPRFreshbooksProject.m in Sources */,
 				F9BD7C1B197E5B4000470C5C /* AppDelegate.m in Sources */,
+				F935B55A197EF2E2004D4D5F /* RPRFreshbooksTask.m in Sources */,
+				F91827EC198279AA00F78931 /* RPRTimeEntry.m in Sources */,
+				F935B557197EEFE1004D4D5F /* RPRTaskParserDelegate.m in Sources */,
+				F91827D219803E7200F78931 /* RPRFreshbooksTimeEntry.m in Sources */,
 				F9BD7C17197E5B4000470C5C /* main.m in Sources */,
+				F93D3E081986AB9800E26786 /* RPRSyncSignalsManager.m in Sources */,
+				F91827E91982799F00F78931 /* RPRProject.m in Sources */,
+				F935B551197E893E004D4D5F /* RPRLineChartCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +560,7 @@
 		};
 		F9BD7C3A197E5B4100470C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE104919693C480D8492EE83 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +574,7 @@
 		};
 		F9BD7C3B197E5B4100470C5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE104919693C480D8492EE83 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +645,7 @@
 				F9BD7C3B197E5B4100470C5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9BD7C3C197E5B4100470C5C /* Build configuration list for PBXNativeTarget "rprtrTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +654,7 @@
 				F9BD7C3E197E5B4100470C5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
