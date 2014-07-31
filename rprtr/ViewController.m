@@ -57,7 +57,11 @@
     [realmz deleteObjects:[RPRTask allObjects]];
     [realmz commitWriteTransaction];
 
-    RACSignal *merged = [RACSignal merge:@[[[RPRSyncSignalsManager sharedManager] syncTasks], [[RPRSyncSignalsManager sharedManager] syncProjects], [[RPRSyncSignalsManager sharedManager] syncTimeEntries]]];
+    RACSignal *merged = [RACSignal merge:@[
+                                           [[RPRSyncSignalsManager sharedManager] syncTasks],
+                                           [[RPRSyncSignalsManager sharedManager] syncProjects],
+                                           [[RPRSyncSignalsManager sharedManager] syncTimeEntries]
+                                           ]];
     
     __block int i = 0;
     [merged subscribeNext:^(NSObject *x) {

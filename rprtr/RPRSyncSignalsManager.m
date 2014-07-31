@@ -22,12 +22,17 @@
 #import "RPRTaskParserDelegate.h"
 #import "RPRFreshbooksTask.h"
 
+#include <libkern/OSAtomic.h>
+
 typedef void(^RPRVoidBlock)();
 typedef void(^RPRVoidBlockWithError)(NSError *);
+
+static volatile int32_t writerCount = 0;
 
 @interface RPRSyncSignalsManager ()
 
 @property (nonatomic, strong, readonly) RLMRealm *realm;
+@property (nonatomic, strong, readonly) RACScheduler *realmScheduler;
 @property (nonatomic, strong, readonly) NSDateFormatter *defaultDateFormater;
 
 @end
@@ -49,6 +54,7 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
     self = [super init];
     if (self) {
         _realm = [RLMRealm defaultRealm];
+        _realmScheduler = [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground name:@"RealmScheduler"];
         _defaultDateFormater = [[NSDateFormatter alloc] init];
         _defaultDateFormater.dateFormat = @"yyyy-MM-dd";
     }
@@ -58,16 +64,20 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
 - (RPRVoidBlock)beginTransactionBlock
 {
     return ^{
-        [self.realm beginWriteTransaction];
-        //NSLog(@"Began");
+        if (OSAtomicIncrement32(&writerCount) == 1) {
+            NSLog(@"Began");
+            [self.realm beginWriteTransaction];
+        }
     };
 }
 
 - (RPRVoidBlock)commitTransactionBlock
 {
     return ^{
-        [self.realm commitWriteTransaction];
-        //NSLog(@"Commit");
+        if (OSAtomicDecrement32(&writerCount) == 0) {
+            [self.realm commitWriteTransaction];
+            NSLog(@"Commit");
+        }
     };
 }
 
@@ -81,11 +91,13 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
 
 - (RACSignal *)databaseSignalForSignal:(RACSignal *)signal block:(RACStream * (^)(id value))block
 {
-    return [signal
-            //doCompleted:[self beginTransactionBlock]]
-            flattenMap:block];
-            //doCompleted:[self commitTransactionBlock]]
-            //doError:[self failTransactionBlock]];
+    return [[[[[[signal
+                 initially:[self beginTransactionBlock]]
+                 subscribeOn:self.realmScheduler]
+                 flattenMap:block]
+                 deliverOn:RACScheduler.mainThreadScheduler]
+                 doCompleted:[self commitTransactionBlock]]
+                 doError:[self failTransactionBlock]];
 }
 
 - (RACSignal *)syncTasks
@@ -97,8 +109,6 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
     
     return [self databaseSignalForSignal:taskSignal block:^id(RPRFreshbooksTask *fbTask) {
         
-        [self beginTransactionBlock]();
-        
         RPRTask *task = [[RPRTask alloc] init];
         
         task.taskId = fbTask.taskId.integerValue;
@@ -108,8 +118,6 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
         task.rate = fbTask.rate.doubleValue;
         
         [self.realm addObject:task];
-        
-        [self commitTransactionBlock]();
         
         return [RACSignal return:task];
         
@@ -124,8 +132,6 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
                                 }];
     
     return [self databaseSignalForSignal:projectSignal block:^id(RPRFreshbooksProject *fbProject) {
-        
-        [self beginTransactionBlock]();
         
         RPRProject *project = [[RPRProject alloc] init];
         
@@ -147,8 +153,6 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
         
         [self.realm addObject:project];
         
-        [self commitTransactionBlock]();
-        
         return [RACSignal return:project];
 
     }];
@@ -162,9 +166,8 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
                             }];
     
     return [self databaseSignalForSignal:timeEntrySignal block:^id(RPRFreshbooksTimeEntry *fbTimeEntry) {
-
-        [self beginTransactionBlock]();
-        
+        //NSLog(@"Time Entry");
+        //return [RACSignal empty];
         RPRTimeEntry *timeEntry = [[RPRTimeEntry alloc] init];
         
         timeEntry.timeEntryId = fbTimeEntry.timeEntryId.integerValue;
@@ -190,11 +193,10 @@ typedef void(^RPRVoidBlockWithError)(NSError *);
         
         [self.realm addObject:timeEntry];
         
-        [self commitTransactionBlock]();
-        
         //return [RACSignal error:[NSError errorWithDomain:@"fuck" code:123 userInfo:@{NSLocalizedDescriptionKey: @"shit"}]];
         
         return [RACSignal return:timeEntry];
+        
     }];
 }
 
