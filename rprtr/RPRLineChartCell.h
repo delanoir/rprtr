@@ -12,6 +12,7 @@
 @interface RPRLineChartCell : UITableViewCell
 
 @property (nonatomic, strong) PNLineChart *lineChart;
+@property (nonatomic, strong) UILabel *yearLabel;
 
 + (CGFloat)height;
 

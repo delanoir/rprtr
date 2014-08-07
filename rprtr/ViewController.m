@@ -67,7 +67,7 @@
     [merged subscribeNext:^(NSObject *x) {
         i++;
         //NSLog(@"Entry! %d %@", i, NSStringFromClass([x class]));
-        //[self.tableView reloadData];
+        [self.tableView reloadData];
     } error:^(NSError *error) {
         NSLog(@"Error");
     } completed:^{

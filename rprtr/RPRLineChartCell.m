@@ -27,7 +27,17 @@
         self.lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 200.0)];
         self.lineChart.backgroundColor = [UIColor clearColor];
         
+        //Year Label
+        self.yearLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 20.0)];
+        self.yearLabel.textAlignment = NSTextAlignmentCenter;
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy"];
+        
+        self.yearLabel.text = [formatter stringFromDate:[NSDate date]];
+        
         [self addSubview:self.lineChart];
+        [self addSubview:self.yearLabel];
     }
     return self;
 }
